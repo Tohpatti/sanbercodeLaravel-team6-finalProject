@@ -20,6 +20,23 @@ use App\Http\Controllers\HomeController;
 // });
 
 
+Route::get('/blog-details', function () {
+    return view('sections.blog_details');
+})->name('blog_details');
+
+Route::get('/product_details', function () {
+    return view('sections.product_details');
+})->name('product_details');
+
+Route::get('/shop_cart', function () {
+    return view('sections.shop_cart');
+})->name('shop_cart');
+
+Route::get('/checkout', function () {
+    return view('sections.checkout');
+})->name('checkout');
+
+
 Route::get('/', function () {
     return view('pages.home');
 })->name('home');
@@ -51,5 +68,5 @@ Route::middleware([
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('/redirect', [HomeController::class, 'redirect']);
+    Route::get('/home', [HomeController::class, 'redirect']);
 });

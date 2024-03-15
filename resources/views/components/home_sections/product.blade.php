@@ -15,6 +15,10 @@
                 <div class="product__item">
                     <div class="product__item__pic set-bg" data-setbg="{{asset('malefashion-master/img/product/product-1.jpg')}}">
                         <span class="label">New</span>
+                        <!-- Tombol Detail Produk -->
+                        <div class="product__item__details">
+                            <a href="./product_details" class="detail-btn">Detail Produk</a>
+                        </div>
                         <ul class="product__hover">
                             <li><a href="#"><img src="{{asset('malefashion-master/img/icon/heart.png')}}" alt=""></a></li>
                             <li><a href="#"><img src="{{asset('malefashion-master/img/icon/compare.png')}}" alt=""> <span>Compare</span></a></li>
@@ -46,6 +50,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                 <div class="product__item">
                     <div class="product__item__pic set-bg" data-setbg="{{asset('malefashion-master/img/product/product-2.jpg')}}">
@@ -54,6 +59,10 @@
                             <li><a href="#"><img src="{{asset('malefashion-master/img/icon/compare.png')}}" alt=""> <span>Compare</span></a></li>
                             <li><a href="#"><img src="{{asset('malefashion-master/img/icon/search.png')}}" alt=""></a></li>
                         </ul>
+                        <!-- Tombol Detail Produk -->
+                        <div class="product__item__details">
+                            <a href="./product_details" class="detail-btn">Detail Produk</a>
+                        </div>
                     </div>
                     <div class="product__item__text">
                         <h6>Piqué Biker Jacket</h6>
@@ -80,6 +89,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                 <div class="product__item sale">
                     <div class="product__item__pic set-bg" data-setbg="{{asset('malefashion-master/img/product/product-3.jpg')}}">
@@ -89,6 +99,10 @@
                             <li><a href="#"><img src="{{asset('malefashion-master/img/icon/compare.png')}}" alt=""> <span>Compare</span></a></li>
                             <li><a href="#"><img src="{{asset('malefashion-master/img/icon/search.png')}}" alt=""></a></li>
                         </ul>
+                        <!-- Tombol Detail Produk -->
+                        <div class="product__item__details">
+                            <a href="./product_details" class="detail-btn">Detail Produk</a>
+                        </div>
                     </div>
                     <div class="product__item__text">
                         <h6>Multi-pocket Chest Bag</h6>
@@ -115,6 +129,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                 <div class="product__item">
                     <div class="product__item__pic set-bg" data-setbg="{{asset('malefashion-master/img/product/product-4.jpg')}}">
@@ -123,6 +138,10 @@
                             <li><a href="#"><img src="{{asset('malefashion-master/img/icon/compare.png')}}" alt=""> <span>Compare</span></a></li>
                             <li><a href="#"><img src="{{asset('malefashion-master/img/icon/search.png')}}" alt=""></a></li>
                         </ul>
+                        <!-- Tombol Detail Produk -->
+                        <div class="product__item__details">
+                            <a href="./product_details" class="detail-btn">Detail Produk</a>
+                        </div>
                     </div>
                     <div class="product__item__text">
                         <h6>Diagonal Textured Cap</h6>
@@ -149,6 +168,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                 <div class="product__item">
                     <div class="product__item__pic set-bg" data-setbg="{{asset('malefashion-master/img/product/product-5.jpg')}}">
@@ -157,6 +177,10 @@
                             <li><a href="#"><img src="{{asset('malefashion-master/img/icon/compare.png')}}" alt=""> <span>Compare</span></a></li>
                             <li><a href="#"><img src="{{asset('malefashion-master/img/icon/search.png')}}" alt=""></a></li>
                         </ul>
+                        <!-- Tombol Detail Produk -->
+                        <div class="product__item__details">
+                            <a href="./product_details" class="detail-btn">Detail Produk</a>
+                        </div>
                     </div>
                     <div class="product__item__text">
                         <h6>Lether Backpack</h6>
@@ -183,8 +207,9 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
-                <div class="product__item sale">
+                <div class="product__item">
                     <div class="product__item__pic set-bg" data-setbg="{{asset('malefashion-master/img/product/product-6.jpg')}}">
                         <span class="label">Sale</span>
                         <ul class="product__hover">
@@ -192,6 +217,10 @@
                             <li><a href="#"><img src="{{asset('malefashion-master/img/icon/compare.png')}}" alt=""> <span>Compare</span></a></li>
                             <li><a href="#"><img src="{{asset('malefashion-master/img/icon/search.png')}}" alt=""></a></li>
                         </ul>
+                        <!-- Tombol Detail Produk -->
+                        <div class="product__item__details">
+                            <a href="./product_details" class="detail-btn">Detail Produk</a>
+                        </div>
                     </div>
                     <div class="product__item__text">
                         <h6>Ankle Boots</h6>
@@ -218,6 +247,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                 <div class="product__item">
                     <div class="product__item__pic set-bg" data-setbg="{{asset('malefashion-master/img/product/product-7.jpg')}}">
@@ -226,6 +256,10 @@
                             <li><a href="#"><img src="{{asset('malefashion-master/img/icon/compare.png')}}" alt=""> <span>Compare</span></a></li>
                             <li><a href="#"><img src="{{asset('malefashion-master/img/icon/search.png')}}" alt=""></a></li>
                         </ul>
+                        <!-- Tombol Detail Produk -->
+                        <div class="product__item__details">
+                            <a href="./product_details" class="detail-btn">Detail Produk</a>
+                        </div>
                     </div>
                     <div class="product__item__text">
                         <h6>T-shirt Contrast Pocket</h6>
@@ -252,6 +286,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                 <div class="product__item">
                     <div class="product__item__pic set-bg" data-setbg="{{asset('malefashion-master/img/product/product-8.jpg')}}">
@@ -260,6 +295,10 @@
                             <li><a href="#"><img src="{{asset('malefashion-master/img/icon/compare.png')}}" alt=""> <span>Compare</span></a></li>
                             <li><a href="#"><img src="{{asset('malefashion-master/img/icon/search.pn')}}g" alt=""></a></li>
                         </ul>
+                        <!-- Tombol Detail Produk -->
+                        <div class="product__item__details">
+                            <a href="./product_details" class="detail-btn">Detail Produk</a>
+                        </div>
                     </div>
                     <div class="product__item__text">
                         <h6>Basic Flowing Scarf</h6>
@@ -286,6 +325,7 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </section>
