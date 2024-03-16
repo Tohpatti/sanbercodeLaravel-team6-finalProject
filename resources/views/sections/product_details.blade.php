@@ -1,8 +1,8 @@
 @extends('index')
 
 @section('content')
-       <!-- Shop Details Section Begin -->
-       <section class="shop-details">
+    <!-- Shop Details Section Begin -->
+    <section class="shop-details">
         <div class="product__details__pic">
             <div class="container">
                 <div class="row">

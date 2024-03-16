@@ -11,13 +11,21 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->decimal('price', 8, 2);
-            $table->string('image');
+            $table->decimal('price', $precision=8, $scale=2);
             $table->text('description');
-            $table->unsignedBigInteger('category_id');
-            $table->timestamps();
+            $table->string('image_source');
+            
+            // $table->unsignedBigInteger('category_id');
+            // $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
 
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->unsignedBigInteger('type_id');
+            $table->foreign('type_id')->references('id')->on('product_type')->onDelete('cascade');
+
+            $table->unsignedBigInteger('status_id');
+            $table->foreign('status_id')->references('id')->on('product_status')->onDelete('cascade');
+
+            $table->timestamps();
+            
         });
     }
 

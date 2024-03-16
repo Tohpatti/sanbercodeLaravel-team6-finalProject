@@ -37,9 +37,7 @@ Route::get('/checkout', function () {
 })->name('checkout');
 
 
-Route::get('/', function () {
-    return view('pages.home');
-})->name('home');
+Route::get('/', [HomeController::class, 'redirect'])->name('home');
 
 Route::get('/shop', function () {
     return view('pages.shop');
