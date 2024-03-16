@@ -19,10 +19,10 @@ class CreateProductsTable extends Migration
             // $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
 
             $table->unsignedBigInteger('type_id');
-            $table->foreign('type_id')->references('id')->on('product_type')->onDelete('cascade');
+            $table->foreign('type_id')->references('id')->on('product_types')->onDelete('cascade');
 
             $table->unsignedBigInteger('status_id');
-            $table->foreign('status_id')->references('id')->on('product_status')->onDelete('cascade');
+            $table->foreign('status_id')->references('id')->on('product_statuses')->onDelete('cascade');
 
             $table->timestamps();
             

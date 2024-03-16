@@ -6,8 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class ProductType extends Model
-{
-    private static $name = ['clothing', 'shoes', 'accessories', 'beauty', 'bags'];
+{   
+    protected $table = 'product_types';
+
+    protected $fillable = [
+        'name',
+    ];
 
     public function products(): HasMany
     {

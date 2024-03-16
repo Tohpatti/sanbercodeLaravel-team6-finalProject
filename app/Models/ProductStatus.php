@@ -7,7 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductStatus extends Model
 {
-    private static $name = ['best-sellers', 'new-arrivals', 'hot-sales'];
+    protected $table = 'product_statuses';
+
+    protected $fillable = [
+        'name',
+    ];
 
     public function products()
     {

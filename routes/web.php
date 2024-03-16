@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 
 
@@ -18,6 +19,10 @@ use App\Http\Controllers\HomeController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::get('/', [PageController::class, 'index'])->name('home');
+
+Route::get('/shop', [PageController::class, 'shop'])->name('shop');
 
 
 Route::get('/blog-details', function () {
@@ -37,11 +42,11 @@ Route::get('/checkout', function () {
 })->name('checkout');
 
 
-Route::get('/', [HomeController::class, 'redirect'])->name('home');
+// Route::get('/', [HomeController::class, 'redirect'])->name('home');
 
-Route::get('/shop', function () {
-    return view('pages.shop');
-})->name('shop');
+// Route::get('/shop', [ProductController::class, 'index'])->name('shop');
+
+Route::get('/shop/cat-{id}', [ProductController::class, 'show'])->name('shop.show');
 
 Route::get('/about', function () {
     return view('pages.about');

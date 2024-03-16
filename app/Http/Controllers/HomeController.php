@@ -4,18 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
 
 class HomeController extends Controller
 {
     public function redirect(){
-
-        $productsQuery = Product::with('types');
-
-        $products = Product::displayProductsAtHome();
-
-        $products = $products->map(function ($item) {
-            return (object) $item;
-        });
+        $products = Product::all()->take(8);
+        
         return view('pages.home', compact('products'));
     }
 }

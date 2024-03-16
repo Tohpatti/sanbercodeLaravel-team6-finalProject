@@ -9,6 +9,15 @@ class ProductController extends Controller
 {
     public function index()
     {
-        return view('pages.home');
+        $products = Product::all();
+
+        return view('pages.shop', compact('products'));
+    }
+    
+    public function show($category_id)
+    {
+        $products = Product::all()->where('category_id', $category_id)->get();
+
+        return view('pages.shop', compact('products'));
     }
 }

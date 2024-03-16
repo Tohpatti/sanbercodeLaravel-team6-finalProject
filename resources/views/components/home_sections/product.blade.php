@@ -16,7 +16,7 @@
             @else
                 <!-- Your foreach loop here -->
                 @foreach ($products as $product)
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix {{$product->status}}">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix {{$product->statuses->name}}">
                         <div class="product__item">
                             <div class="product__item__pic set-bg" data-setbg="{{asset('malefashion-master/img/product/' . $product->image_source)}}">
                                 <!-- Tombol Detail Produk -->
