@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 
 
@@ -24,14 +26,16 @@ Route::get('/', [PageController::class, 'index'])->name('home');
 
 Route::get('/shop', [PageController::class, 'shop'])->name('shop');
 
+Route::post('/addToCart', [CartController::class, 'addToCart'])->name('add-to-cart');
+
+Route::get('/showCart', [CartController::class, 'showCart'])->name('show-cart');
+
 
 Route::get('/blog-details', function () {
     return view('sections.blog_details');
 })->name('blog_details');
 
-Route::get('/product_details', function () {
-    return view('sections.product_details');
-})->name('product_details');
+Route::get('/product_details/{id}', [ProductController::class, 'show'])->name('product.details');
 
 Route::get('/shop_cart', function () {
     return view('sections.shop_cart');

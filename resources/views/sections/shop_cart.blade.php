@@ -1,8 +1,8 @@
 @extends('index')
 
 @section('content')
-      <!-- Breadcrumb Section Begin -->
-      <section class="breadcrumb-option">
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-option">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -36,86 +36,33 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="{{asset('malefashion-master/img/product/product-1.jpg')}}" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>T-shirt Contrast Pocket</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty-2">
-                                                <input type="text" value="1">
+                                <?php $totalPrice = 0; ?>
+                                @foreach ($orders as $order)
+                                    <tr>
+                                        <td class="product__cart__item">
+                                            <div class="product__cart__item__pic">
+                                                <img src="{{asset('malefashion-master/img/product/' . $order->products->image_source)}}" width="auto" height="100px" alt="">
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 30.00</td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
-                                </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="{{asset('malefashion-master/img/product/product-2.jpg')}}" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>Diagonal Textured Cap</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty-2">
-                                                <input type="text" value="1">
+                                            <div class="product__cart__item__text">
+                                                <h6>{{$order->products->name}}</h6>
+                                                <h5>${{$order->products->price}}</h5>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 32.50</td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
-                                </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="{{asset('malefashion-master/img/product/product-3.jpg')}}" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>Basic Flowing Scarf</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty-2">
-                                                <input type="text" value="1">
+                                        </td>
+                                        <td class="quantity__item">
+                                            <div class="quantity">
+                                                <div class="pro-qty-2">
+                                                    <input type="text" class="quantity-input" data-order-id="{{ $order->id }}" value={{$order->quantity}}>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 47.00</td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
-                                </tr>
-                                <tr>
-                                    <td class="product__cart__item">
-                                        <div class="product__cart__item__pic">
-                                            <img src="{{asset('malefashion-master/img/product/product-4.jpg')}}" alt="">
-                                        </div>
-                                        <div class="product__cart__item__text">
-                                            <h6>Basic Flowing Scarf</h6>
-                                            <h5>$98.49</h5>
-                                        </div>
-                                    </td>
-                                    <td class="quantity__item">
-                                        <div class="quantity">
-                                            <div class="pro-qty-2">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="cart__price">$ 30.00</td>
-                                    <td class="cart__close"><i class="fa fa-close"></i></td>
-                                </tr>
+                                        </td>
+                                        <td class="cart__price" id="total-price-{{ $order->id }}">$ {{$order->products->price * $order->quantity }}</td>
+                                        <td class="cart__close"><i class="fa fa-close"></i></td>
+                                    </tr>
+
+                                    <?php 
+                                        $totalPrice += $order->products->price * $order->quantity;
+                                    ?>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -143,10 +90,10 @@
                     <div class="cart__total">
                         <h6>Cart total</h6>
                         <ul>
-                            <li>Subtotal <span>$ 169.50</span></li>
-                            <li>Total <span>$ 169.50</span></li>
+                            <li>Subtotal <span>$ <?php echo $totalPrice ?></span></li>
+                            <li>Total <span>$ <?php echo $totalPrice ?></span></li>
                         </ul>
-                        <a href="./checkout" class="primary-btn">Proceed to checkout</a>
+                        <a href="#" class="primary-btn">Proceed to checkout</a>
                     </div>
                 </div>
             </div>
@@ -154,3 +101,15 @@
     </section>
     <!-- Shopping Cart Section End -->
 @endsection
+
+<script>
+    $(document).ready(function() {
+        $('.quantity-input').on('input', function() {
+            var quantity = $(this).val();
+            var orderId = $(this).data('order-id');
+            var pricePerUnit = parseFloat($('#price-per-unit-' + orderId).data('price'));
+            var totalPrice = quantity * pricePerUnit;
+            $('#total-price-' + orderId).text('$ ' + totalPrice.toFixed(2));
+        });
+    });
+</script>

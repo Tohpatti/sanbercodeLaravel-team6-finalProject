@@ -75,7 +75,7 @@
                 <div class="header__nav__option">
                     <a href="#" class="search-switch"><img src="{{asset('malefashion-master/img/icon/search.png')}}" alt=""></a>
                     <a href="#"><img src="{{asset('malefashion-master/img/icon/heart.png')}}" alt=""></a>
-                    <a href="#"><img src="{{asset('malefashion-master/img/icon/cart.png')}}" alt=""> <span>0</span></a>
+                    <a href="{{ route('show-cart')}}"><img src="{{asset('malefashion-master/img/icon/cart.png')}}" alt=""> <span>0</span></a>
                     <div class="price">$0.00</div>
                 </div>
             </div>

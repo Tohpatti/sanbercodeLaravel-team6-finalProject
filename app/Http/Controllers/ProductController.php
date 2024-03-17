@@ -4,20 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class ProductController extends Controller
-{
-    public function index()
+{   
+    public function showProduct($id)
     {
-        $products = Product::all();
-
-        return view('pages.shop', compact('products'));
-    }
-    
-    public function show($category_id)
-    {
-        $products = Product::all()->where('category_id', $category_id)->get();
-
-        return view('pages.shop', compact('products'));
+        $mainProducts = Product::where('id', $id)->get();
+        $products = Product::all()->take(4);
+        return view('sections.product_details', compact('mainProducts', 'products'));
     }
 }

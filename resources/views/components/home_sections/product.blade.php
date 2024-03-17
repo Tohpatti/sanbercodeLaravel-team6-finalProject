@@ -17,16 +17,14 @@
                 <!-- Your foreach loop here -->
                 @foreach ($products as $product)
                     <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix {{$product->statuses->name}}">
-                        <div class="product__item">
+                        <div class="product__item {{$product->statuses->name == 'new-arrivals' ? 'sale' : ''}}">
                             <div class="product__item__pic set-bg" data-setbg="{{asset('malefashion-master/img/product/' . $product->image_source)}}">
-                                <!-- Tombol Detail Produk -->
-                                <div class="product__item__details">
-                                    <a href="./product_details" class="detail-btn">Details</a>
-                                </div>
+                                <span class="label">New</span>
                                 <ul class="product__hover">
-                                    <li><a href="#"><img src="{{asset('malefashion-master/img/icon/heart.png')}}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{asset('malefashion-master/img/icon/compare.png')}}" alt=""> <span>Compare</span></a></li>
-                                    <li><a href="#"><img src="{{asset('malefashion-master/img/icon/search.png')}}" alt=""></a></li>
+                                    <li><a href="#"><img src="{{asset('malefashion-master/img/icon/heart.png')}}" alt=""><span>Favorite</span></a></li>
+                                    <li><a href="#"><img src="{{asset('malefashion-master/img/icon/compare.png')}}" alt=""><span>Compare</span></a></li>
+                                    <!-- Tombol Detail Produk -->
+                                    <li><a href="/product_details/{{$product->id}}"><img src="{{asset('malefashion-master/img/icon/search.png')}}" alt=""><span>Details</span></a></li>
                                 </ul>
                             </div>
                             <div class="product__item__text">
