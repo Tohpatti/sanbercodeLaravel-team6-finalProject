@@ -17,7 +17,7 @@
 <hr>
 <img src="storage\assets\erd.jpg" alt="ERD Prototype E-Commerce Database Design">
 <br>
-<h4>Link Video</h4>>
+<h4>Link Video</h4>
 <p>Link Demo Aplikasi: <a href="https://youtu.be/8jHieDuy3fs">https://youtu.be/8jHieDuy3fs</a></p>
 
 
