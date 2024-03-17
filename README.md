@@ -17,6 +17,14 @@
 <hr>
 <img src="storage\assets\erd.jpg" alt="ERD Prototype E-Commerce Database Design">
 <br>
+<h4>Requirement yang telah Dilakukan:</h4>
+<hr>
+<ul>
+    <li>Menggunakan Autentikasi dengan Jetstream</li>
+    <li>Menggunakan PHPOffice/PHPSpreadsheet untuk membaca file excel di Product Seeder</li>
+    <li>Membuat Eloquent antara model Produk, ProdukType, ProdukStatus, dan Order </li>
+</ul>
+<br>
 <h4>Link Video</h4>
 <p>Link Demo Aplikasi: <a href="https://youtu.be/8jHieDuy3fs">https://youtu.be/8jHieDuy3fs</a></p>
 
