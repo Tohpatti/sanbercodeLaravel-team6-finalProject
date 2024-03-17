@@ -35,7 +35,7 @@ Route::get('/blog-details', function () {
     return view('sections.blog_details');
 })->name('blog_details');
 
-Route::get('/product_details/{id}', [ProductController::class, 'show'])->name('product.details');
+Route::get('/product_details/{id}', [ProductController::class, 'showProduct'])->name('product.details');
 
 Route::get('/shop_cart', function () {
     return view('sections.shop_cart');

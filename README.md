@@ -1,4 +1,28 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h3>Final Project</h3>
+<hr>
+<h4>Kelompok 6</h4>
+<hr>
+<h4>Anggota Kelompok</h4>
+<hr>
+<ul>
+    <li>Dwi Lusiana Rahayu</li>
+    <li>Tohpatti Crippa Praha</li>
+    <li>Abdul Hadi</li>
+</ul>
+<br>
+<h4>Tema Project</h4>
+<p>E-commerce</p>
+<hr>
+<h4>ERD</h4>
+<hr>
+<img src="storage\assets\erd.jpg" alt="ERD Prototype E-Commerce Database Design">
+<br>
+<h4>Link Video</h4>>
+<p>Link Demo Aplikasi: <a href="https://youtu.be/8jHieDuy3fs">https://youtu.be/8jHieDuy3fs</a></p>
+
+
+
+<!-- <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
@@ -63,4 +87,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT). -->

@@ -93,7 +93,7 @@
                             <li>Subtotal <span>$ <?php echo $totalPrice ?></span></li>
                             <li>Total <span>$ <?php echo $totalPrice ?></span></li>
                         </ul>
-                        <a href="#" class="primary-btn">Proceed to checkout</a>
+                        <a href="{{route('checkout')}}" class="primary-btn">Proceed to checkout</a>
                     </div>
                 </div>
             </div>
@@ -101,15 +101,3 @@
     </section>
     <!-- Shopping Cart Section End -->
 @endsection
-
-<script>
-    $(document).ready(function() {
-        $('.quantity-input').on('input', function() {
-            var quantity = $(this).val();
-            var orderId = $(this).data('order-id');
-            var pricePerUnit = parseFloat($('#price-per-unit-' + orderId).data('price'));
-            var totalPrice = quantity * pricePerUnit;
-            $('#total-price-' + orderId).text('$ ' + totalPrice.toFixed(2));
-        });
-    });
-</script>
