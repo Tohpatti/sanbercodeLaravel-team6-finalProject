@@ -20,7 +20,7 @@
 <h4>Requirement yang telah Dilakukan:</h4>
 <hr>
 <ul>
-    <li>Menggunakan Autentikasi dengan Jetstream</li>
+    <li>Melakukan Autentikasi dengan Jetstream</li>
     <li>Menggunakan PHPOffice/PHPSpreadsheet untuk membaca file excel di Product Seeder</li>
     <li>Membuat Eloquent antara model Produk, ProdukType, ProdukStatus, dan Order </li>
 </ul>
